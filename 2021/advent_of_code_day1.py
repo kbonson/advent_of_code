@@ -7,7 +7,7 @@ def process_sonar_data(total_bins):
 	"""
 	print("Beginning processing of festive elvish sonar data...")
 
-	sonar_datafile = 'input_data.csv'
+	sonar_datafile = 'day1_input_data.csv'
 	depths = read_input_data(sonar_datafile)
 	# _, binned_y = bin_data(depths, n_bins=total_bins)
 	plot_data(depths)
