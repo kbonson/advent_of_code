@@ -8,12 +8,8 @@ def main(infile)
 	data.each { 
 		|line| 
     	if line.eql? ""
-    	    puts "break!"
 			collection_total = snack_bag.sum
 			calorie_totals << collection_total
-			puts "snack_bag: #{snack_bag}"
-			puts "collection_total: #{collection_total}"
-			puts "calorie_totals: #{calorie_totals}"
 			snack_bag.clear()
 
 		else
