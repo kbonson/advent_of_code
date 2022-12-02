@@ -1,6 +1,4 @@
-
 def main(infile)
-	collection_total = []
     calorie_totals = []
     snack_bag = []
 
@@ -8,19 +6,15 @@ def main(infile)
 	data.each { 
 		|line| 
     	if line.eql? ""
-			collection_total = snack_bag.sum
-			calorie_totals << collection_total
+			calorie_totals << snack_bag.sum
 			snack_bag.clear()
-
 		else
 			snack_bag << line.to_i
-
 		end
 
 	}
 	if snack_bag.length > 1
-		collection_total = snack_bag.sum
-		calorie_totals << collection_total
+		calorie_totals << snack_bag.sum
 	end
 
 	sorted_calories = calorie_totals.sort()
@@ -36,5 +30,5 @@ end
 
 
 
-infile = 'calories_list.csv'
+infile = 'calories_list.txt'
 main(infile)

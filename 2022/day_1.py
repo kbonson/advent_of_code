@@ -3,22 +3,18 @@
 def main(infile):
 	snack_bag = []
 	calorie_totals = []
-
 	with open(infile, 'r', encoding='utf-8-sig') as fin:
 		for line in fin:
 			line = line.strip('\n')
 			if line == '':
-				collection_total = sum(snack_bag)
-				calorie_totals.append(collection_total)
+				calorie_totals.append(sum(snack_bag))
 				snack_bag.clear()
 
 			else:
 				snack_bag.append(int(line))
 
 	if len(snack_bag) > 1:
-		collection_total = sum(snack_bag)
-		calorie_totals.append(collection_total)
-
+		calorie_totals.append(sum(snack_bag))
 
 	calorie_totals.sort(reverse=True)
 
@@ -30,5 +26,5 @@ def main(infile):
 	print(f'Total from top 3: {total_of_top_three}')
 
 if __name__=="__main__":
-	infile = 'calories_list.csv'
+	infile = 'calories_list.txt'
 	main(infile)
