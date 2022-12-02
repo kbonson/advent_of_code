@@ -1,5 +1,3 @@
-
-
 def main(infile):
 	snack_bag = []
 	calorie_totals = []

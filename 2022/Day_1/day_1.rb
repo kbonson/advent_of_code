@@ -29,6 +29,5 @@ def main(infile)
 end
 
 
-
 infile = 'calories_list.txt'
 main(infile)
