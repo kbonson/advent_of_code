@@ -1,7 +1,6 @@
 
 
 def main(infile):
-	new_snack_collection = False
 	snack_bag = []
 	calorie_totals = []
 
@@ -26,7 +25,7 @@ def main(infile):
 	most_calories = calorie_totals[0]
 	second_most_calories = calorie_totals[1]
 	third_most_calories = calorie_totals[2]
-
+	print(f'Max number of calories: {most_calories}')
 	total_of_top_three = sum([most_calories, second_most_calories, third_most_calories])
 	print(f'Total from top 3: {total_of_top_three}')
 
